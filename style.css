@@ -230,6 +230,7 @@ nav {
   flex: 1;
   display: flex;
   align-items: center;
+  margin: 24px;
 }
 
 .about-me__img {
@@ -268,13 +269,18 @@ nav {
 
 /* TECH - STACK */
 
+#dual_logo{
+  width: 100%;
+  transition: all 300ms;
+}
+
 .language__img {
   width: 100%;
   max-width: 100px;
   transition: all 300ms;
 }
 
-.language:hover .language__img {
+.language:hover .language__img #dual_logo {
   filter: brightness(80%);
   opacity: 0.86;
   transform: scale(0.9);
@@ -293,13 +299,13 @@ nav {
   align-items: center;
   padding: 25px 16px;
 }
-
 .language__list {
   display: flex;
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
 }
+
 
 .language__name {
   position: absolute;
@@ -317,13 +323,17 @@ nav {
 
 /* PROJECTS */
 
+.web-projects--container,
+.certifications--container,
+.publications--container,
 .models-projects--container {
-  display: none;
+    display: none;
 }
 
 .web-projects--container {
-  display: flex
+    display: block; /* This will show the web projects by default */
 }
+
 
 .project {
   margin-bottom: 135px;
@@ -378,6 +388,7 @@ nav {
 .project__buttons--container {
   display: flex;
   justify-content: center;
+  margin: 8px;
   gap: 20px;
 }
 
